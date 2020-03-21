@@ -1,34 +1,46 @@
 {
-  "name": "discordbans",
-  "version": "1.0.0",
-  "description": "GlobalBan",
-  "main": "index.js",
-  "scripts": {
-    "test": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DJS-JPN/DiscordBans.git"
-  },
-  "keywords": [
-    "discord.js"
-  ],
-  "author": "DJS-JPN",
+  "name": "hypie",
+  "version": "0.0.1",
+  "description": "Hypie is a template that supports the creation of Discord bots.",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DJS-JPN/DiscordBans/issues"
+  "main": "./dist/bot.js",
+  "scripts": {
+    "start": "node -r dotenv-safe/config ./dist/bot.js",
+    "start:dev": "ts-node -r dotenv-safe/config ./src/bot.ts",
+    "compile": "tsc -p .",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint --ext .ts . --fix"
   },
-  "homepage": "https://github.com/DJS-JPN/DiscordBans#readme",
   "dependencies": {
-    "discord.js": "^11.3.2",
-    "dotenv": "^6.0.0"
+    "deepmerge": "^4.2.2",
+    "discord.js": "^12.0.2",
+    "dotenv-safe": "^8.2.0",
+    "glob": "^7.1.6",
+    "parrot-logger": "^0.0.3",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^4.1.1",
+    "typeorm": "^0.2.24",
+    "utility-types": "^3.10.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "@inkohx/eslint-config-codestyle": "^2.1.1",
+    "@types/deepmerge": "^2.2.0",
+    "@types/glob": "^7.1.1",
+    "@types/node": "^13.9.2",
+    "@types/ws": "^7.2.3",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "ts-node": "^8.7.0",
+    "typescript": "^3.8.3"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "libsodium-wrappers": "^0.7.6",
+    "utf-8-validate": "^5.0.2",
+    "zlib-sync": "^0.1.6"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   }
 }

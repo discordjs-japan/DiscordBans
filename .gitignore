@@ -62,3 +62,9 @@ typings/
 
 # IDE
 .idea/*
+
+# output
+dist/
+
+# db
+*.sqlite3
